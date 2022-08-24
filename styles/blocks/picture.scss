@@ -1,0 +1,47 @@
+.picture {
+  background-color: $titleColor;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @include onTablet {
+    height: 520px;
+    padding: 80px 60px;
+    align-items: center;
+  }
+
+  @include onDesktop {
+    height: 450px;
+    padding: 80px 90px 80px 150px;
+    flex-direction: row;
+  }
+
+  &__content {
+   
+    @include onDesktop {
+      width: 500px;
+      margin-top: 60px;
+    }
+
+    &-title {
+      font-size: 20px;
+      font-weight: bold;
+      
+    }
+
+    &-line {
+      margin-top: 25px;
+      width: 80px;
+      height: 3px;
+      background-color: $orangeColor;
+    }
+
+    &-description {
+      margin-top: 25px;
+      color: $descriptionColor;
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $blackColor;
+  height: 120px;
+
+  &__icons {
+    display: flex;
+    padding: 0 20px;
+    margin-top: 60px;
+    justify-content: space-between;
+
+    @include onTablet {
+      align-self: center;
+      width: 280px;
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    margin-top: 5px;
+
+    &-year {
+      margin-right: 5px;
+      color: rgba(255, 255, 255, 0.498039215686275);
+      font-family: 'Open Sans Regular', 'Open Sans';
+      font-weight: 400;
+      font-size: 12px;
+    }
+
+    &-link {
+      color: rgba(255, 255, 255, 0.498039215686275);
+      font-family: 'Open Sans Regular', 'Open Sans';
+      text-decoration: none;
+      font-weight: 400;
+      font-size: 12px;
+
+      &:hover {
+        color: $whiteColor;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__back-home {
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    justify-items: flex-end;
+    align-self: flex-end;
+    top: -120px;
+    margin-right: 20px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    background-color: $orangeColor;
+    
+    &-arrow {
+      color: $whiteColor;
+      text-decoration: none;
+      font-size: 28px;
+      padding: 4px 0 0 16px;
+    }
+  }
+}

@@ -1,0 +1,102 @@
+.sublist {
+  padding: 20px;
+  background-color: $whiteColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include onTablet {
+    height: 650px;
+    padding: 80px 60px;
+  }
+
+  @include onDesktop {
+    height: 500px;
+    padding: 80px 150px;
+    flex-direction: row-reverse;
+  }
+
+  &__content {
+
+    @include onTablet {
+
+    }
+  
+    @include onDesktop {
+      margin-left: 80px;
+      width: 600px;
+    }
+
+    &-title {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    &-line {
+      margin-top: 25px;
+      width: 80px;
+      height: 3px;
+      background-color: $orangeColor;
+    }
+
+    &-description {
+      margin-top: 25px;
+      color: $descriptionColor;
+      font-size: 16px;
+      line-height: 28px;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: row;
+
+      &--icon {
+        box-sizing: border-box;
+        height: 30px;
+        width: 30px;
+        border: 1px solid $orangeColor;
+        border-radius: 50%;
+        margin-right: 10px;
+        color: $orangeColor;
+        padding: 2px 0 0 6.5px;
+        flex-shrink: 0;
+      }
+
+      &--title {
+        font-weight: bold;
+
+      }
+
+      &--text {
+        margin: 15px 0 25px;
+        color: $descriptionColor;
+        font-size: 16px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  &__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-content {
+      width: 100%;
+    }
+
+    @include onTablet {
+      width: 460px;
+    }
+
+    @include onDesktop {
+      width: 560px;
+    }
+
+    &:hover {
+      transition: 0.7s;
+      transform: scale(1.1);
+    }
+  }
+}

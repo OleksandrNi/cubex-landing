@@ -1,0 +1,88 @@
+.social-media {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: $whiteColor;
+  padding: 0 20px;
+  justify-content: space-between;
+
+  @include onTablet {
+    padding-bottom: 20px;
+  }
+
+  @include onDesktop {
+    flex-direction: row;
+    padding: 0 0 0 150px;
+    height: 120px;
+  }
+
+  &__title {
+    font-weight: bold;
+
+    @include onDesktop {
+      text-align: left;
+    }
+  }
+
+  &__description {
+    display: none;
+
+    @include onDesktop {
+      display: block;
+      width: 360px;
+      font-size: 14px;
+      text-align: left;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+
+    @include onTablet {
+      margin-right: 20px;
+    }
+
+    @include onDesktop {
+      width: 600px;
+      margin: 18px 200px 0px 0;
+      padding-top: 10px;
+    }
+ }
+}
+
+.social-media__icons .fa {
+  display: block;
+  font-size: 24px;
+  width: 24px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  color: $mediaIconColor;
+
+  @include onTablet {
+    font-size: 40px;
+  }
+
+  @include onDesktop {
+    font-size: 50px;
+  }
+}
+
+.social-media__icons .fa:hover {
+    color: $mediaIconHoverColor;
+}
+
+.fa {
+  display: block;
+  font-size: 24px;
+  width: 24px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  color: $mediaIconColor;
+}
+
+.fa:hover {
+    color: $mediaIconHoverColor;
+}

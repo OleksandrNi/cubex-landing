@@ -1,0 +1,30 @@
+@import "./utils/vars.scss";
+@import "./utils/mixins.scss";
+
+@import "./blocks/header.scss";
+@import "./blocks/head.scss";
+@import "./blocks/social-media.scss";
+@import "./blocks/section-tabs.scss";
+@import "./blocks/sublist.scss";
+@import "./blocks/picture.scss";
+@import "./blocks/awesome.scss";
+@import "./blocks/pricing.scss";
+@import "./blocks/stylish.scss";
+@import "./blocks/contact_us.scss";
+@import "./blocks/feedback.scss";
+@import "./blocks/footer.scss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+.page {
+  font-family: 'Open Sans', sans-serif;
+  background: url(../images/image.jpeg) fixed;
+  background-size: auto;
+  background-position: center bottom 45%;
+
+  &__body {
+    margin: 0;
+  }
+}

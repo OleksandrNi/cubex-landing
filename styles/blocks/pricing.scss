@@ -1,0 +1,143 @@
+.pricing {
+  background-color: $titleColor;
+  padding: 40px 20px 20px;
+
+  @include onTablet {
+    padding: 80px 60px;
+  }
+
+  @include onDesktop {
+    padding: 80px 150px;
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-title {
+      font-family: 'raleway-regular', sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 22px;
+      color: $titleBlackColor;
+      text-align: center;
+      line-height: 29px;
+    }
+
+    &-line{
+      align-self: center;
+      margin-top: 25px;
+      width: 80px;
+      height: 3px;
+      background-color: $orangeColor;
+    }
+
+    &-text {
+      margin-top: 25px;
+      color: $descriptionColor;
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+
+    @include onTablet {
+      flex-direction: row;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+  }
+
+  &__price {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+    @include onTablet {
+      width: 330px;
+      margin-right: 28px;
+      margin-top: 40px;
+    }
+
+    &-title {
+      box-sizing: border-box;
+      display: flex;
+      height: 60px;
+      background-color: $greyColor;
+      justify-content: center;
+      align-items: center;
+      color: $whiteColor;
+      font-size: 16px;
+      border-bottom: 0.5px solid $titleColor;
+    }
+
+    &-price {
+      box-sizing: border-box;
+      display: flex;
+      height: 100px;
+      background-color: $greyColor;
+      justify-content: center;
+      align-items: center;
+      color: $whiteColor;
+
+      &--dollar {
+        font-family: 'Raleway Bold', sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        text-align: center;
+        line-height: normal;
+      }
+
+      &--digit {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 60px;
+        text-align: center;
+      }
+    }
+
+    &-price_comment {
+      box-sizing: border-box;
+      display: flex;
+      height: 50px;
+      background-color: $greyColor;
+      justify-content: center;
+      align-items: center;
+      font-family: 'OpenSans Semibold';
+      font-style: italic;
+      color: $whiteColor;
+    }
+
+    &-line {
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 3px;
+      background-color: $orangeColor;
+
+      &--text {
+        padding: 14px 0;
+        color: $whiteColor;
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
+
+    &-description {
+      box-sizing: border-box;
+      display: flex;
+      height: 40px;
+      background-color: $whiteColor;
+      justify-content: center;
+      align-items: center;
+      color: $greyColor;
+      font-size: 12px;
+      border-bottom: 0.5px solid $titleColor;
+    }
+  }
+}

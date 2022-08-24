@@ -1,0 +1,162 @@
+.section-tabs {
+  display: flex;
+  flex-direction: row;
+  background-color: $titleColor;
+  height: 700px;
+  padding: 20px;
+
+  @include onTablet {
+    height: 450px;
+    padding: 80px 60px;
+  }
+
+  @include onDesktop {
+    padding: 80px 150px;
+  }
+
+  &__image {
+    display: none;
+
+    @include onDesktop {
+      display: block;
+      position: absolute;
+      right: 100px;
+      padding-top: 70px;
+    }
+  }
+
+  &__tab {
+    width: 800px;
+    position: relative;
+  }
+}
+
+#tab-11, #tab-22, #tab-33 {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s;
+  padding-right: 20px;
+
+  @include onTablet {
+    position: absolute;
+    left: 220px;
+    max-width: 600px;
+    padding: 0;
+  }
+
+  @include onDesktop {
+    left: 140px;
+    max-width: 450px;
+  }
+}
+
+#_1:checked ~ #tab-11, 
+#_2:checked ~ #tab-22, 
+#_3:checked ~ #tab-33 {
+  visibility: visible;
+  opacity: 1;
+}
+
+#_1:checked ~ .collapse1 {
+  background: $orangeColor;
+}
+
+#_2:checked ~ .collapse2 {
+  background: $orangeColor;
+}
+
+#_3:checked ~ .collapse3 {
+  background: $orangeColor;
+}
+
+.collapse {
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 2px;
+  color: $whiteColor;
+  background-color: $blackColor;
+  width: calc(100% / 3);
+  height: 53px;
+  text-align: center;
+  line-height: 53px;
+
+  &:hover {
+    transition: 0.7s;
+    background-color: $greyColor;
+  }
+}
+
+.collapse1 {
+  @include onTablet {
+    position: absolute;
+    top: 30px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.collapse2 {
+  @include onTablet {
+    position: absolute;
+    top: 111px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.collapse3 {
+  @include onTablet {
+    position: absolute;
+    top: 192px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.input {
+  display: none;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &__description {
+    margin-top: 25px;
+    text-align: justify;
+    color: $descriptionColor;
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  &__line {
+    margin-top: 20px;
+    width: 80px;
+    height: 3px;
+    background-color: $orangeColor;
+  }
+
+  &__button {
+    width: 100%;
+    height: 40px;
+    color: $whiteColor;
+    background-color: $orangeColor;
+    border-color: $orangeColor;
+
+    @include onTablet {
+      width: 145px;
+    }
+
+    &:hover {
+      background-color: $lightOrangeColor;
+      border-color: $lightOrangeColor;
+    }
+  }
+}

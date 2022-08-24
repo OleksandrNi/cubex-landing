@@ -1,0 +1,156 @@
+.head {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 20px 0;
+  height: 470px;
+
+  @include onTablet {
+    padding: 60px;
+    height: 450px
+  }
+
+  @include onDesktop {
+    padding: 0 150px;
+    height: 570px;
+  }
+
+  &__logo {
+      
+    @include onTablet {
+      height: 40px;
+    }
+
+    @include onDesktop {
+      margin-top: 100px;
+      height: 60px;
+    }
+  }
+
+  &__title {
+    font-family: 'raleway', sans-serif;
+    margin-top: 40px;
+
+    color: $whiteColor;
+    font-size: 22px;
+    font-weight: 600;
+
+    @include onTablet {
+      width: 550px;
+      font-size: 28px;
+    }
+
+    @include onDesktop {
+      font-size: 36px;
+    }
+  }
+
+  &__line {
+    margin-top: 30px;
+    height: 3px;
+    width: 80px;
+    background-color: $whiteColor;
+  }
+
+  &__description {
+    margin-top: 30px;
+    font-family: 'raleway', sans-serif;
+    color: $whiteColor;
+    line-height: 22px;
+    font-size: 14px;
+    font-weight: 400;
+
+    @include onTablet {
+      width: 460px;
+    }
+  }
+
+  &__button {
+    display: block;
+    margin-top: 60px;
+    height: 40px;
+    width: 100%;
+    background: transparent;
+    color: $whiteColor;
+    border-color: $whiteColor;
+
+    @include onTablet {
+      width: 135px;
+    }
+
+    &:hover {
+      transition: 0.7s;
+      color: $blackColor;
+      border-color: $whiteColor;
+      background-color: $whiteColor;
+    }
+  }
+
+  &__invitation {
+    display: none;
+
+    @include onDesktop {
+      box-sizing: border-box;
+      display: flex;
+      justify-items: flex-start;
+      flex-direction: column;
+      margin-top: 140px;
+      height: 330px;
+      width: 360px;
+
+      background-color: $whiteColor;
+    }
+
+    &-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 54px;
+      background-color: $titleColor;
+      color: $blackColor;
+    }
+
+    &-form {
+      display: flex;
+      flex-direction: column;
+      padding: 0 45px 0;
+
+      &--input {
+        box-sizing: border-box;
+        padding: 2px;
+        margin-top: 29px;
+        border: none;
+        border-bottom: 1px solid #bdbdbd;
+        height: 30px;
+        font-family: 'Open Sans Regular', 'Open Sans';
+        font-weight: 400;
+        color: $blackColor;
+        font-size: 14px;
+  
+        &:focus {
+          outline: none;
+          border: 1px solid $orangeColor;
+        }
+
+        &::placeholder {
+          color: #bdbdbd;
+          opacity: 0.4;
+        }
+      }
+
+      &--button {
+        margin-top: 50px;
+        width: 100%;
+        height: 54px;
+        color: $whiteColor;
+        background-color: $orangeColor;
+        border-color: $orangeColor;
+    
+        &:hover {
+          transition: 0.7s;
+          background-color: $lightOrangeColor;
+          border-color: $lightOrangeColor;
+        }
+      }
+    }
+  }
+}
