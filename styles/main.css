@@ -213,7 +213,7 @@
 }
 @media (min-width: 767px) {
   .head__button {
-    width: 135px;
+    width: 160px;
   }
 }
 .head__button:hover {
@@ -437,7 +437,7 @@
 }
 @media (min-width: 1199px) {
   #tab-11, #tab-22, #tab-33 {
-    left: 140px;
+    left: 200px;
     max-width: 450px;
   }
 }
@@ -481,26 +481,29 @@
   .collapse1 {
     position: absolute;
     top: 30px;
-    width: 80px;
-    height: 80px;
+    width: 110px;
+    height: 110px;
+    line-height: 110px;
   }
 }
 
 @media (min-width: 767px) {
   .collapse2 {
     position: absolute;
-    top: 111px;
-    width: 80px;
-    height: 80px;
+    top: 141px;
+    width: 110px;
+    height: 110px;
+    line-height: 110px;
   }
 }
 
 @media (min-width: 767px) {
   .collapse3 {
     position: absolute;
-    top: 192px;
-    width: 80px;
-    height: 80px;
+    top: 252px;
+    width: 110px;
+    height: 110px;
+    line-height: 110px;
   }
 }
 
@@ -539,7 +542,7 @@
 }
 @media (min-width: 767px) {
   .tabs__button {
-    width: 145px;
+    width: 160px;
   }
 }
 .tabs__button:hover {
@@ -920,6 +923,8 @@
   padding: 20px;
   background-image: url(../images/stylish_background.jpg);
   background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 @media (min-width: 767px) {
   .stylish {
@@ -969,7 +974,7 @@
 }
 @media (min-width: 1199px) {
   .stylish__button {
-    width: 135px;
+    width: 160px;
   }
 }
 
@@ -1115,7 +1120,7 @@
 }
 @media (min-width: 1199px) {
   .contact_us__form-button {
-    width: 135px;
+    width: 160px;
   }
 }
 
@@ -1230,8 +1235,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
   background-color: #000;
-  height: 120px;
+  height: 160px;
 }
 .footer__icons {
   display: flex;
@@ -1272,15 +1278,20 @@
 .footer__back-home {
   box-sizing: border-box;
   display: flex;
-  position: relative;
+  position: absolute;
   justify-items: flex-end;
   align-self: flex-end;
-  top: -120px;
+  top: -24px;
   margin-right: 20px;
   border-radius: 50%;
   width: 48px;
   height: 48px;
   background-color: #ff8b38;
+}
+@media (min-width: 1199px) {
+  .footer__back-home {
+    margin-right: 200px;
+  }
 }
 .footer__back-home-arrow {
   color: #fff;
